@@ -8,8 +8,6 @@
         "-I/usr/local/include",
         "-I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed",
         "-I/usr/include",
-        "-I/home/felix/R/x86_64-pc-linux-gnu-library/4.0/Rcpp/include",
-        "-I/home/felix/R/x86_64-pc-linux-gnu-library/4.0/RcppArmadillo/include",
         "-std=gnu++11",
         "-I/usr/include/R/",
         "-DNDEBUG",
@@ -18,7 +16,7 @@
         "-fpic",
         "-fno-plt"
     ],
-    "hash" : "160538496616053849661605384966",
+    "hash" : "160538728416053849661605384966",
     "is_cpp" : true,
-    "pch" : "Rcpp"
+    "pch" : ""
 }

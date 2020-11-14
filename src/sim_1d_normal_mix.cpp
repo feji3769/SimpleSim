@@ -21,3 +21,4 @@ arma::mat SimMixC(int N, arma::colvec mu, arma::colvec sigma, std::vector<double
   }
   return result;
 }
+
