@@ -6,55 +6,23 @@
 
 using namespace Rcpp;
 
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _SimpleSim_rcpparma_hello_world() {
+// SimMixC
+arma::mat SimMixC(int N, arma::colvec mu, arma::colvec sigma, std::vector<double> p);
+RcppExport SEXP _SimpleSim_SimMixC(SEXP NSEXP, SEXP muSEXP, SEXP sigmaSEXP, SEXP pSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _SimpleSim_rcpparma_outerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _SimpleSim_rcpparma_innerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _SimpleSim_rcpparma_bothproducts(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type mu(muSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type sigma(sigmaSEXP);
+    Rcpp::traits::input_parameter< std::vector<double> >::type p(pSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimMixC(N, mu, sigma, p));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_SimpleSim_rcpparma_hello_world", (DL_FUNC) &_SimpleSim_rcpparma_hello_world, 0},
-    {"_SimpleSim_rcpparma_outerproduct", (DL_FUNC) &_SimpleSim_rcpparma_outerproduct, 1},
-    {"_SimpleSim_rcpparma_innerproduct", (DL_FUNC) &_SimpleSim_rcpparma_innerproduct, 1},
-    {"_SimpleSim_rcpparma_bothproducts", (DL_FUNC) &_SimpleSim_rcpparma_bothproducts, 1},
+    {"_SimpleSim_SimMixC", (DL_FUNC) &_SimpleSim_SimMixC, 4},
     {NULL, NULL, 0}
 };
 
