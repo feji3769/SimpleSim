@@ -20,9 +20,53 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// SimSwissRollC
+List SimSwissRollC(int N, double sigma);
+RcppExport SEXP _SimpleSim_SimSwissRollC(SEXP NSEXP, SEXP sigmaSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimSwissRollC(N, sigma));
+    return rcpp_result_gen;
+END_RCPP
+}
+// SimFriedman1C
+List SimFriedman1C(int N, int nFeatures, double sigma);
+RcppExport SEXP _SimpleSim_SimFriedman1C(SEXP NSEXP, SEXP nFeaturesSEXP, SEXP sigmaSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< int >::type nFeatures(nFeaturesSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimFriedman1C(N, nFeatures, sigma));
+    return rcpp_result_gen;
+END_RCPP
+}
+// SimPolyChangePointC
+List SimPolyChangePointC(int N, double sigma, arma::colvec xRange, double x0, arma::colvec m1, arma::colvec m2);
+RcppExport SEXP _SimpleSim_SimPolyChangePointC(SEXP NSEXP, SEXP sigmaSEXP, SEXP xRangeSEXP, SEXP x0SEXP, SEXP m1SEXP, SEXP m2SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type xRange(xRangeSEXP);
+    Rcpp::traits::input_parameter< double >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type m1(m1SEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type m2(m2SEXP);
+    rcpp_result_gen = Rcpp::wrap(SimPolyChangePointC(N, sigma, xRange, x0, m1, m2));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_SimpleSim_SimMixC", (DL_FUNC) &_SimpleSim_SimMixC, 4},
+    {"_SimpleSim_SimSwissRollC", (DL_FUNC) &_SimpleSim_SimSwissRollC, 2},
+    {"_SimpleSim_SimFriedman1C", (DL_FUNC) &_SimpleSim_SimFriedman1C, 3},
+    {"_SimpleSim_SimPolyChangePointC", (DL_FUNC) &_SimpleSim_SimPolyChangePointC, 6},
     {NULL, NULL, 0}
 };
 
