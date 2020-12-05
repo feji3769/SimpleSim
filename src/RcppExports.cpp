@@ -57,6 +57,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// SimFriedman3C
+List SimFriedman3C(int N, double sigma);
+RcppExport SEXP _SimpleSim_SimFriedman3C(SEXP NSEXP, SEXP sigmaSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimFriedman3C(N, sigma));
+    return rcpp_result_gen;
+END_RCPP
+}
 // SimPolyChangePointC
 List SimPolyChangePointC(int N, double sigma, arma::colvec xRange, double x0, arma::colvec m1, arma::colvec m2);
 RcppExport SEXP _SimpleSim_SimPolyChangePointC(SEXP NSEXP, SEXP sigmaSEXP, SEXP xRangeSEXP, SEXP x0SEXP, SEXP m1SEXP, SEXP m2SEXP) {
@@ -79,6 +91,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_SimpleSim_SimSwissRollC", (DL_FUNC) &_SimpleSim_SimSwissRollC, 2},
     {"_SimpleSim_SimFriedman1C", (DL_FUNC) &_SimpleSim_SimFriedman1C, 3},
     {"_SimpleSim_SimFriedman2C", (DL_FUNC) &_SimpleSim_SimFriedman2C, 2},
+    {"_SimpleSim_SimFriedman3C", (DL_FUNC) &_SimpleSim_SimFriedman3C, 2},
     {"_SimpleSim_SimPolyChangePointC", (DL_FUNC) &_SimpleSim_SimPolyChangePointC, 6},
     {NULL, NULL, 0}
 };

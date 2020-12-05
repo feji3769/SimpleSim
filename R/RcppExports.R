@@ -17,6 +17,10 @@ SimFriedman2C <- function(N, sigma) {
     .Call('_SimpleSim_SimFriedman2C', PACKAGE = 'SimpleSim', N, sigma)
 }
 
+SimFriedman3C <- function(N, sigma) {
+    .Call('_SimpleSim_SimFriedman3C', PACKAGE = 'SimpleSim', N, sigma)
+}
+
 SimPolyChangePointC <- function(N, sigma, xRange, x0, m1, m2) {
     .Call('_SimpleSim_SimPolyChangePointC', PACKAGE = 'SimpleSim', N, sigma, xRange, x0, m1, m2)
 }

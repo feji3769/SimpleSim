@@ -2,6 +2,7 @@
 
 export(SimFriedman1)
 export(SimFriedman2)
+export(SimFriedman3)
 export(SimNormalMix)
 export(SimPolyChangePoint)
 export(SimSwissRoll)
