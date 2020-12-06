@@ -15,7 +15,11 @@
 #' sigma = c(0.1, 0.1, 0.1)
 #' p = c(1/4, 1/4, 1/2)
 #' SimNormalMix(N, mu, sigma, p)
-SimNormalMix = function(N, mu, sigma, p){
+SimNormalMix = function(N, mu, sigma, p, seed = NULL){
+  if(!is.null(seed)){
+    .checkSeed(seed)
+    set.seed(seed)
+  }
   .checkPositive(N)
   .requireConstant(N)
   .checkPositive(sigma)
