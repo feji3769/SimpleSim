@@ -48,7 +48,7 @@
   if(!is.numeric(v)){
     stop(sprintf("%s must be a numeric input.", name))
   }
-  if(!is.vector(v)){
+  if(!(is.vector(v) & length(v) > 1)){
     stop(sprintf("%s must be a vector.", name))
   }
 }
