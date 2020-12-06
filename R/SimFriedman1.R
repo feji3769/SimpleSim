@@ -11,7 +11,11 @@
 #' nFeatures = 10
 #' sigma = 0.1
 #' SimFriedman1(N, nFeatures, sigma)
-SimFriedman1 = function(N, nFeatures, sigma){
+SimFriedman1 = function(N, nFeatures, sigma, seed = NULL){
+  if(!is.null(seed)){
+    .checkSeed(seed)
+    set.seed(seed)
+  }
   if(!(is.numeric(N) & is.numeric(nFeatures) & is.numeric(sigma))){
     stop("N, nfeatures and sigma must be numeric.")
   }

@@ -12,6 +12,10 @@
 SimSwissRoll = function(N, sigma, seed = NULL){
   if(!is.null(seed)){
     .checkSeed(seed)
+    set.seed(seed)
+  }
+  if(!is.null(seed)){
+    .checkSeed(seed)
   } else {
     seed = -1
   }
@@ -30,7 +34,7 @@ SimSwissRoll = function(N, sigma, seed = NULL){
   if(floor(N) != N){
     stop("N must be a whole number.")
   }
-  result = SimSwissRollC(N, sigma, seed)
+  result = SimSwissRollC(N, sigma)
   return(result)
 }
 
