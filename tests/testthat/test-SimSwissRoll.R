@@ -12,5 +12,8 @@ test_that("Swiss Roll output is correct.", {
   expect_error(SimSwissRoll(1, -1))
   expect_error(SimSwissRoll(-1, .1))
   expect_error(SimSwissRoll(N, sigma, seed = -1))
+  expect_error(SimSwissRoll(N, sigma, seed = .1))
+  
+  
 })
 

@@ -5,8 +5,8 @@ SimMixC <- function(N, mu, sigma, p) {
     .Call(`_SimpleSim_SimMixC`, N, mu, sigma, p)
 }
 
-SimSwissRollC <- function(N, sigma) {
-    .Call(`_SimpleSim_SimSwissRollC`, N, sigma)
+SimSwissRollC <- function(N, sigma, seed) {
+    .Call(`_SimpleSim_SimSwissRollC`, N, sigma, seed)
 }
 
 SimBlobsC <- function(N, centers) {

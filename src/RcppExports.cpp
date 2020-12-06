@@ -21,14 +21,15 @@ BEGIN_RCPP
 END_RCPP
 }
 // SimSwissRollC
-List SimSwissRollC(int N, double sigma);
-RcppExport SEXP _SimpleSim_SimSwissRollC(SEXP NSEXP, SEXP sigmaSEXP) {
+List SimSwissRollC(int N, double sigma, int seed);
+RcppExport SEXP _SimpleSim_SimSwissRollC(SEXP NSEXP, SEXP sigmaSEXP, SEXP seedSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type N(NSEXP);
     Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
-    rcpp_result_gen = Rcpp::wrap(SimSwissRollC(N, sigma));
+    Rcpp::traits::input_parameter< int >::type seed(seedSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimSwissRollC(N, sigma, seed));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -112,7 +113,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_SimpleSim_SimMixC", (DL_FUNC) &_SimpleSim_SimMixC, 4},
-    {"_SimpleSim_SimSwissRollC", (DL_FUNC) &_SimpleSim_SimSwissRollC, 2},
+    {"_SimpleSim_SimSwissRollC", (DL_FUNC) &_SimpleSim_SimSwissRollC, 3},
     {"_SimpleSim_SimBlobsC", (DL_FUNC) &_SimpleSim_SimBlobsC, 2},
     {"_SimpleSim_SimFriedman1C", (DL_FUNC) &_SimpleSim_SimFriedman1C, 3},
     {"_SimpleSim_SimFriedman2C", (DL_FUNC) &_SimpleSim_SimFriedman2C, 2},
