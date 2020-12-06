@@ -2,10 +2,11 @@
 % Please edit documentation in R/InputChecks.R
 \name{.requireMatrix}
 \alias{.requireMatrix}
-\title{Internal function to enforce input is a matrix of numbers.}
+\title{Internal function to enforce input is a matrix of numbers}
 \usage{
 .requireMatrix(n, name)
 }
 \description{
-Internal function to enforce input is a matrix of numbers.
+Internal function to enforce input is a matrix of numbers
 }
+\keyword{internal}

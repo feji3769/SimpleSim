@@ -2,10 +2,11 @@
 % Please edit documentation in R/InputChecks.R
 \name{.requireConstant}
 \alias{.requireConstant}
-\title{Internal function to enforce input is a single number.}
+\title{Internal function to enforce input is a single number}
 \usage{
 .requireConstant(n, name)
 }
 \description{
-Internal function to enforce input is a single number.
+Internal function to enforce input is a single number
 }
+\keyword{internal}

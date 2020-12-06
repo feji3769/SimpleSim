@@ -2,10 +2,11 @@
 % Please edit documentation in R/InputChecks.R
 \name{.requireVector}
 \alias{.requireVector}
-\title{Internal function to enforce input is vector.}
+\title{Internal function to enforce input is vector}
 \usage{
 .requireVector(v, name)
 }
 \description{
-Internal function to enforce input is vector.
+Internal function to enforce input is vector
 }
+\keyword{internal}

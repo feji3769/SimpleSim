@@ -1,8 +1,5 @@
-#library(RcppArmadillo)
-#library(Rcpp)
-#sourceCpp("src/sim_1d_normal_mix.cpp")
 
-#' @title Simulate polynomial change point model.
+#' @title Simulate polynomial change point model
 #' @description Simulate data from a change point model made of polynomials. 
 #' @param N number of data points to simulate.
 #' @param sigma noise level, default = .1.

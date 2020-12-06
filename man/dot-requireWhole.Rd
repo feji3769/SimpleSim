@@ -2,10 +2,11 @@
 % Please edit documentation in R/InputChecks.R
 \name{.requireWhole}
 \alias{.requireWhole}
-\title{Internal function for checking that a number is a whole number.}
+\title{Internal function for checking that a number is a whole number}
 \usage{
 .requireWhole(n, name)
 }
 \description{
-Internal function for checking that a number is a whole number.
+Internal function for checking that a number is a whole number
 }
+\keyword{internal}

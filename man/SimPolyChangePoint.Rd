@@ -2,7 +2,7 @@
 % Please edit documentation in R/SimPolyChangePoint.R
 \name{SimPolyChangePoint}
 \alias{SimPolyChangePoint}
-\title{Simulate polynomial change point model.}
+\title{Simulate polynomial change point model}
 \usage{
 SimPolyChangePoint(
   N,

@@ -7,6 +7,7 @@
 #' @param centers The centers of the blobs (default = NULL). 
 #' @param centerBox The bounding box for centers when generated randomly (default = c(-10, 10)). 
 #' @return list(x = x, y = y, centers = centers)
+#' @importFrom stats runif
 #' @export
 #' @examples
 #' N = c(2,2,2)

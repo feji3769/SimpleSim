@@ -2,7 +2,7 @@
 % Please edit documentation in R/SimNormalMix.R
 \name{SimNormalMix}
 \alias{SimNormalMix}
-\title{Simulate Normal Mixture in 1d.}
+\title{Simulate Normal Mixture in 1d}
 \usage{
 SimNormalMix(N, mu, sigma, p)
 }

@@ -1,8 +1,5 @@
-#library(RcppArmadillo)
-#library(Rcpp)
-#sourceCpp("src/sim_1d_normal_mix.cpp")
 
-#' @title Simulate Normal Mixture in 1d.
+#' @title Simulate Normal Mixture in 1d
 #' @description Simulate data from m normal distributions
 #' centered at different locations with different
 #' variances.

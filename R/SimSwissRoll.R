@@ -1,8 +1,5 @@
-#library(RcppArmadillo)
-#library(Rcpp)
-#sourceCpp("src/sim_1d_normal_mix.cpp")
 
-#' @title Simulate a Swiss Roll in 3d.
+#' @title Simulate a Swiss Roll in 3d
 #' @description Simulate data from a Swiss Roll. 
 #' @param N number of data points to simulate.
 #' @param sigma noise level.

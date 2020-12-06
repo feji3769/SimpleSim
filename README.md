@@ -1,5 +1,8 @@
 # SimpleSim
 
+  <!-- badges: start -->
+  [![Travis build status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=master)](https://travis-ci.com/feji3769/SimpleSim)
+  <!-- badges: end -->
 ## Introduction
 This library contains functions for simulating data. The goal is to have fast and intuitive functions. 
 
@@ -39,6 +42,3 @@ SimpleSim can generate the following data:
 
 
 
-  <!-- badges: start -->
-  [![Travis build status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=master)](https://travis-ci.com/feji3769/SimpleSim)
-  <!-- badges: end -->

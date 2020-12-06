@@ -2,7 +2,7 @@
 % Please edit documentation in R/SimSwissRoll.R
 \name{SimSwissRoll}
 \alias{SimSwissRoll}
-\title{Simulate a Swiss Roll in 3d.}
+\title{Simulate a Swiss Roll in 3d}
 \usage{
 SimSwissRoll(N, sigma)
 }

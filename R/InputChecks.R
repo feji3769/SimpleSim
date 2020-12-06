@@ -1,6 +1,7 @@
 
 
-#' Internal function for checking vectors. 
+#' Internal function for checking vectors
+#' @keywords internal
 .checkVector = function(v, name){
   if(!is.numeric(v)){
     stop(sprintf("%s must be type numeric.", name))
@@ -15,7 +16,8 @@
 
 
 
-#' Internal function for checking input is positive.
+#' Internal function for checking input is positive
+#' @keywords internal
 .checkPositive = function(n, name){
   if(!is.numeric(n)){
     stop(sprintf("%s must be a numeric input.", name))
@@ -25,7 +27,8 @@
   }
 }
 
-#' Internal function to enforce input is a matrix of numbers. 
+#' Internal function to enforce input is a matrix of numbers
+#' @keywords internal
 .requireMatrix = function(n, name){
   if(!is.numeric(n)){
     stop(sprintf("%s must be a numeric input.", name))
@@ -39,7 +42,8 @@
 }
 
 
-#' Internal function to enforce input is vector. 
+#' Internal function to enforce input is vector
+#' @keywords internal
 .requireVector = function(v, name){
   if(!is.numeric(v)){
     stop(sprintf("%s must be a numeric input.", name))
@@ -51,7 +55,8 @@
 
 
 
-#' Internal function to enforce input is a single number. 
+#' Internal function to enforce input is a single number
+#' @keywords internal
 .requireConstant = function(n, name){
   if(!is.numeric(n)){
     stop(sprintf("%s must be a numeric input.", name))
@@ -64,7 +69,8 @@
 
 
 
-#' Internal function for checking that a number is a whole number. 
+#' Internal function for checking that a number is a whole number
+#' @keywords internal
 .requireWhole = function(n, name){
   if(n != floor(n)){
     stop(sprintf("%s must be a whole number.", name))
