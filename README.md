@@ -3,7 +3,7 @@
   <!-- badges: start -->
   [![Travis build status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=master)](https://travis-ci.com/feji3769/SimpleSim)
   
-  [![Codecov test coverage](https://codecov.io/gh/feji3769/SimpleSim/branch/master/graph/badge.svg)](https://codecov.io/gh/feji3769/SimpleSim?branch=master)
+[![codecov](https://codecov.io/gh/feji3769/SimpleSim/branch/main/graph/badge.svg?token=M7OCZNJ28T)](https://codecov.io/gh/feji3769/SimpleSim)
   <!-- badges: end -->
 ## Introduction
 This library contains functions for simulating data. The goal is to have fast and intuitive functions. 
