@@ -1,0 +1,49 @@
+---
+title: "SwissRoll"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SwissRoll}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+This document goes through using the SimSwissRoll function.
+
+
+# Swiss Roll Usage
+As always start by loading SimpleSim
+```{r setup}
+library(SimpleSim)
+```
+
+Next we generate 1000 realizations from the Swiss Roll, and see what we get out. 
+
+```{r}
+swissResults = SimSwissRoll(1000, .1)
+names(swissResults)
+```
+SimSwissRoll returns a list with the "data" and "t". The data is the x,y,z coordinates of each obersation and t is the value of t for that triple. We can plot the z vs. x and see our familiar treat. 
+
+```{r}
+data = swissResults$data
+plot(data[,1], data[,3], ylab = "z", xlab = "x", main = "Swiss Roll z vs. x")
+```
+
+## A Noisy Swiss Roll
+We can also make a noisier version of our favoriate pastry by changing the value of sigma. 
+```{r}
+swissResults = SimSwissRoll(1000, sigma = 2)
+data = swissResults$data
+plot(data[,1], data[,3], ylab = "z", xlab = "x", main = "Noisy Swiss Roll z vs. x")
+
+```
+
+That barely even looks like our favorite food! However, when you squint all is good. 

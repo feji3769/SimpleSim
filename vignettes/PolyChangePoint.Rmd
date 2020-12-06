@@ -1,0 +1,71 @@
+---
+title: "PolyChangePoint"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PolyChangePoint}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# Introduction
+This document shows examples simulating data from a polynomial change point model. As always SimpleSim provides an easy solution!
+
+
+
+# Two Linear Models
+
+First we load the our package. 
+```{r setup}
+library(SimpleSim)
+```
+
+Now let's get to business. We want 100 observations from this model: 
+$$y = 0.1 * x * I_{x<.5}  + 5 * x * I_{x\geq 0.5}$$
+Where $I_x$ is the 'ol indicator function.
+
+
+Now remember that the coefficients are placed in decreasing order, so for our first model we should have c(.1, 0).
+
+
+```{r}
+N = 100
+linearResult = SimPolyChangePoint(N, sigma = 0.1, x0 = 0.5, m1 = c(.1, 0), m2 = c(5, 0))
+plot(linearResult$data[,1], linearResult$data[,2], ylab = "y", xlab = "x", main = "Linear Change Point Model")
+```
+Now those are two lines! Be better if they have some curve to them though, so let's bump up the degree of the first model. 
+
+
+
+# A Quadratic and Linear Model
+Let's give the first model a little $x^2$ term and change the domain. So our model is:
+$$y = (1.2 *x^2 + 0.1 * x) * I_{x<5}  + 5 * x * I_{x\geq 5}$$
+
+```{r}
+N = 100
+linearResult = SimPolyChangePoint(N, sigma = 0.1, xRange = c(0, 10),x0 = 5, m1 = c(2, .1, 0), m2 = c(5, 0))
+plot(linearResult$data[,1], linearResult$data[,2], ylab = "y", xlab = "x", main = "Linear Change Point Model")
+```
+
+
+
+# Discontinuity
+That's a little cooler, but I hate that they meet at the change-point. Let's add a discontinuity and see how cool it is. 
+
+
+```{r}
+N = 100
+linearResult = SimPolyChangePoint(N, sigma = 0.1, xRange = c(0, 10),x0 = 5, m1 = c(2, .1, 0), m2 = c(5, 15))
+plot(linearResult$data[,1], linearResult$data[,2], ylab = "y", xlab = "x", main = "Linear Change Point Model")
+```
+
+
+Now that's a rollercoaster I'd be afraid to ride!
+
