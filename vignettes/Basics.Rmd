@@ -46,18 +46,10 @@ Below we play with some more features of the Blobs function.
 ```{r}
 # specifying the centers of each blob.  
 centers = matrix(c(2,3,10,11), byrow = T, ncol = 2)
-blobs = SimBlobs(40, centers)
+blobs = SimBlobs(40, centers = centers)
 plot(blobs$x[,1], blobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Centers Given")
 ```
 
-## Changing Centers
-We can create a matrix of centers (each row is a center).
-```{r}
-# specifying the centers of each blob.  
-centers = matrix(c(2,3,10,11), byrow = T, ncol = 2)
-blobs = SimBlobs(40, centers)
-plot(blobs$x[,1], blobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Centers Given")
-```
 
 ## Changing Bounding Box
 You can also choose to have the centers of the blobs we uniformly generated within the interval given by centerBox. 
