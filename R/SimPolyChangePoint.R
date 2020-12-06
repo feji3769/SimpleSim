@@ -18,7 +18,11 @@
 #' m2 = c(5,2)
 #' SimPolyChangePoint(N, noise, xRange, x0, m1, m2)
 SimPolyChangePoint = function(N, sigma = NULL, xRange=NULL, x0=NULL, 
-                              m1 = NULL, m2 = NULL){
+                              m1 = NULL, m2 = NULL, seed = NULL){
+  if(!is.null(seed)){
+    .checkSeed(seed)
+    set.seed(seed)
+  }
   
   # checking if default values are 
   # overridden.
