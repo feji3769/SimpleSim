@@ -2,9 +2,7 @@
 
   <!-- badges: start -->
   [![Travis build status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=master)](https://travis-ci.com/feji3769/SimpleSim)
-  <!-- badges: end -->
   
-    <!-- badges: start -->
   [![Codecov test coverage](https://codecov.io/gh/feji3769/SimpleSim/branch/master/graph/badge.svg)](https://codecov.io/gh/feji3769/SimpleSim?branch=master)
   <!-- badges: end -->
 ## Introduction
