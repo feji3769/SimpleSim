@@ -24,6 +24,7 @@ centered at different locations with different
 variances.
 }
 \examples{
+N = 100
 mu = c(1,2,3)
 sigma = c(0.1, 0.1, 0.1)
 p = c(1/4, 1/4, 1/2)

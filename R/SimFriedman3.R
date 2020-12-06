@@ -8,7 +8,7 @@
 #' @examples
 #' N = 100
 #' sigma = 0.1
-#' SimFriedman3(N, nFeatures, sigma)
+#' SimFriedman3(N, sigma)
 SimFriedman3 = function(N, sigma){
   if(!(is.numeric(N) & is.numeric(sigma))){
     stop("N and sigma must be numeric.")
@@ -24,6 +24,5 @@ SimFriedman3 = function(N, sigma){
   result = SimFriedman3C(N_, sigma)
   return(list(x = result$X, y = result$Y))
 }
-
 
 

@@ -2,7 +2,7 @@
 // [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
 //
-//' @export
+
 // [[Rcpp::export]]
 List SimBlobsC(arma::colvec N, arma::mat centers){
   int p = centers.n_cols;

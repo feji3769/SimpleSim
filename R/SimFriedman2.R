@@ -8,7 +8,7 @@
 #' @examples
 #' N = 100
 #' sigma = 0.1
-#' SimFriedman2(N, nFeatures, sigma)
+#' SimFriedman2(N, sigma)
 SimFriedman2 = function(N, sigma){
   if(!(is.numeric(N) & is.numeric(sigma))){
     stop("N and sigma must be numeric.")

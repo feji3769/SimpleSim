@@ -9,7 +9,6 @@ SimSwissRollC <- function(N, sigma) {
     .Call(`_SimpleSim_SimSwissRollC`, N, sigma)
 }
 
-#' @export
 SimBlobsC <- function(N, centers) {
     .Call(`_SimpleSim_SimBlobsC`, N, centers)
 }

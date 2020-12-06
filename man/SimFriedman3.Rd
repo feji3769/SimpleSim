@@ -20,5 +20,5 @@ Simulate from the 'Friedman #3' regression problem.
 \examples{
 N = 100
 sigma = 0.1
-SimFriedman3(N, nFeatures, sigma)
+SimFriedman3(N, sigma)
 }

@@ -20,5 +20,5 @@ Simulate from the 'Friedman #2' regression problem.
 \examples{
 N = 100
 sigma = 0.1
-SimFriedman2(N, nFeatures, sigma)
+SimFriedman2(N, sigma)
 }
