@@ -13,8 +13,12 @@
 #' N = c(2,2,2)
 #' centers = centers = matrix(c(1,10,35, 67,6,7), ncol = 2)
 #' SimBlobs(N, centers = centers)
-SimBlobs = function(N, nFeatures=3, centers=NULL, centerBox = c(-10,10)){
-   
+SimBlobs = function(N, nFeatures=3, centers=NULL, centerBox = c(-10,10), seed = NULL){
+  
+  if(!is.null(seed)){
+    .checkSeed(seed)
+    set.seed(seed)
+  }
   .requireVector(centerBox)
   if(centerBox[2] < centerBox[1]){
     stop("Bounding box for centers must be increasing between 1 and 2.")
