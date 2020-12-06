@@ -60,3 +60,13 @@
     stop(sprintf("%s must be a single number.", name))
   }
 }
+
+
+
+
+#' Internal function for checking that a number is a whole number. 
+.requireWhole = function(n, name){
+  if(n != floor(n)){
+    stop(sprintf("%s must be a whole number.", name))
+  }
+}

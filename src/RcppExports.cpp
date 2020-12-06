@@ -97,6 +97,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// SimSCurveC
+List SimSCurveC(int N, double sigma);
+RcppExport SEXP _SimpleSim_SimSCurveC(SEXP NSEXP, SEXP sigmaSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimSCurveC(N, sigma));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_SimpleSim_SimMixC", (DL_FUNC) &_SimpleSim_SimMixC, 4},
@@ -106,6 +118,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_SimpleSim_SimFriedman2C", (DL_FUNC) &_SimpleSim_SimFriedman2C, 2},
     {"_SimpleSim_SimFriedman3C", (DL_FUNC) &_SimpleSim_SimFriedman3C, 2},
     {"_SimpleSim_SimPolyChangePointC", (DL_FUNC) &_SimpleSim_SimPolyChangePointC, 6},
+    {"_SimpleSim_SimSCurveC", (DL_FUNC) &_SimpleSim_SimSCurveC, 2},
     {NULL, NULL, 0}
 };
 

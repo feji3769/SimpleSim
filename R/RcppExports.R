@@ -29,3 +29,7 @@ SimPolyChangePointC <- function(N, sigma, xRange, x0, m1, m2) {
     .Call('_SimpleSim_SimPolyChangePointC', PACKAGE = 'SimpleSim', N, sigma, xRange, x0, m1, m2)
 }
 
+SimSCurveC <- function(N, sigma) {
+    .Call('_SimpleSim_SimSCurveC', PACKAGE = 'SimpleSim', N, sigma)
+}
+
