@@ -56,7 +56,7 @@ SimPolyChangePoint = function(N, sigma = NULL, xRange=NULL, x0=NULL,
   if(xRange[2] < xRange[1]){
     stop("xRange must be increasing. ")
   }
-  if(!(is.numeric(N) | is.numeric(sigma) | is.numeric(xRange) | is.numeric(x0) | is.numeric(m1) | 
+  if(!(is.numeric(N) & is.numeric(sigma) & is.numeric(xRange) & is.numeric(x0) & is.numeric(m1) & 
        is.numeric(m2))){
     stop("Arugments must be numeric.")
   }

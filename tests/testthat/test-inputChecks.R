@@ -12,7 +12,7 @@ test_that("test if inputs checks work", {
   
   # require matrix
   expect_error(.requireMatrix(matrix(c("a")), "not numeric"))
-  expect_error(.requireMatrix(matrix(c(NA)), "not numeric"))
+  expect_error(.requireMatrix(matrix(c(1, NA)), "contains NA"))
   expect_error(.requireMatrix(c(11), "not numeric"))
   
   # require vector
