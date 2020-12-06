@@ -4,7 +4,7 @@
 \alias{SimFriedman1}
 \title{Friedman 1}
 \usage{
-SimFriedman1(N, nFeatures, sigma)
+SimFriedman1(N, nFeatures, sigma, seed = NULL)
 }
 \arguments{
 \item{N}{Number of data points to simulate. Positive integer.}
@@ -12,6 +12,8 @@ SimFriedman1(N, nFeatures, sigma)
 \item{nFeatures}{Number of features, must be at least 5. Positive ingter.}
 
 \item{sigma}{Noise level for Gaussian noise. Must be postive.}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(x = x, y = y)

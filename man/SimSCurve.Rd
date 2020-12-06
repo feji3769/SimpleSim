@@ -4,12 +4,14 @@
 \alias{SimSCurve}
 \title{S-curve}
 \usage{
-SimSCurve(N, sigma = 0.1)
+SimSCurve(N, sigma = 0.1, seed = NULL)
 }
 \arguments{
 \item{N}{Number of data points.}
 
 \item{sigma}{The sd of the gaussian noise (default = 0.1) must be positive.}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(x = x, t = t)

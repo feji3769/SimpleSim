@@ -10,7 +10,8 @@ SimPolyChangePoint(
   xRange = NULL,
   x0 = NULL,
   m1 = NULL,
-  m2 = NULL
+  m2 = NULL,
+  seed = NULL
 )
 }
 \arguments{
@@ -25,6 +26,8 @@ SimPolyChangePoint(
 \item{m1}{coefficients for first polynomial model, default = c(1,2).}
 
 \item{m2}{coefficients for second polynomial model, default = c(0,3).}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(data = matrix(x,y,z), t = t)

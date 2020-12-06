@@ -4,12 +4,14 @@
 \alias{SimFriedman2}
 \title{Friedman 2}
 \usage{
-SimFriedman2(N, sigma)
+SimFriedman2(N, sigma, seed = NULL)
 }
 \arguments{
 \item{N}{Number of data points to simulate. Positive integer.}
 
 \item{sigma}{Noise level for Gaussian noise. Must be postive.}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(x = x, y = y)

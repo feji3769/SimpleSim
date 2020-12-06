@@ -4,7 +4,7 @@
 \alias{SimNormalMix}
 \title{Simulate Normal Mixture in 1d}
 \usage{
-SimNormalMix(N, mu, sigma, p)
+SimNormalMix(N, mu, sigma, p, seed = NULL)
 }
 \arguments{
 \item{N}{number of data points to simulate.}
@@ -14,6 +14,8 @@ SimNormalMix(N, mu, sigma, p)
 \item{sigma}{vector of standard deviations.}
 
 \item{p}{vector of weights for each distribution.}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(x = x, label = label)

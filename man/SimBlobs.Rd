@@ -4,7 +4,7 @@
 \alias{SimBlobs}
 \title{Blobs}
 \usage{
-SimBlobs(N, nFeatures = 3, centers = NULL, centerBox = c(-10, 10))
+SimBlobs(N, nFeatures = 3, centers = NULL, centerBox = c(-10, 10), seed = NULL)
 }
 \arguments{
 \item{N}{If an integer the number of data points per blob, if a vector the number
@@ -15,6 +15,8 @@ of data points for each blob.}
 \item{centers}{The centers of the blobs (default = NULL).}
 
 \item{centerBox}{The bounding box for centers when generated randomly (default = c(-10, 10)).}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(x = x, y = y, centers = centers)

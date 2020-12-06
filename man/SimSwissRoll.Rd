@@ -4,12 +4,14 @@
 \alias{SimSwissRoll}
 \title{Simulate a Swiss Roll in 3d}
 \usage{
-SimSwissRoll(N, sigma)
+SimSwissRoll(N, sigma, seed = NULL)
 }
 \arguments{
 \item{N}{number of data points to simulate.}
 
 \item{sigma}{noise level.}
+
+\item{seed}{seed for RNG (default = NULL).}
 }
 \value{
 list(data = matrix(x,y,z), t = t)
