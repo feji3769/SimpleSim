@@ -76,3 +76,12 @@
     stop(sprintf("%s must be a whole number.", name))
   }
 }
+
+
+#' Internal function for checking seed
+#' @keywords internal
+.checkSeed = function(n){
+  .requireConstant(n,'seed')
+  .requireWhole(n, 'seed')
+  .checkPositive(n, 'seed')
+}

@@ -9,7 +9,12 @@
 #' N = 100
 #' noise = .1
 #' SimSwissRoll(N, noise)
-SimSwissRoll = function(N, sigma){
+SimSwissRoll = function(N, sigma, seed = NULL){
+  if(!is.null(seed)){
+    .checkSeed(seed)
+  } else {
+    seed = -1
+  }
   if(!is.numeric(N)){
     stop("N must be a number.")
   }
@@ -25,7 +30,7 @@ SimSwissRoll = function(N, sigma){
   if(floor(N) != N){
     stop("N must be a whole number.")
   }
-  result = SimSwissRollC(N, sigma)
+  result = SimSwissRollC(N, sigma, seed)
   return(result)
 }
 

@@ -5,9 +5,11 @@
 using namespace Rcpp;
 //
 // [[Rcpp::export]]
-List SimSwissRollC(int N, double sigma) {
+List SimSwissRollC(int N, double sigma, int seed) {
   
-  
+  if(seed != -1){
+    arma::arma_rng::set_seed(seed);
+  }
   arma::colvec t = 1.5 * M_PI * (1 + 2 * arma::randu(N));
   arma::colvec x = t % arma::cos(t);
   arma::colvec y = 21 * arma::randu(N);
