@@ -2,34 +2,35 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 SimMixC <- function(N, mu, sigma, p) {
-    .Call('_SimpleSim_SimMixC', PACKAGE = 'SimpleSim', N, mu, sigma, p)
+    .Call(`_SimpleSim_SimMixC`, N, mu, sigma, p)
 }
 
 SimSwissRollC <- function(N, sigma) {
-    .Call('_SimpleSim_SimSwissRollC', PACKAGE = 'SimpleSim', N, sigma)
+    .Call(`_SimpleSim_SimSwissRollC`, N, sigma)
 }
 
+#' @export
 SimBlobsC <- function(N, centers) {
-    .Call('_SimpleSim_SimBlobsC', PACKAGE = 'SimpleSim', N, centers)
+    .Call(`_SimpleSim_SimBlobsC`, N, centers)
 }
 
 SimFriedman1C <- function(N, nFeatures, sigma) {
-    .Call('_SimpleSim_SimFriedman1C', PACKAGE = 'SimpleSim', N, nFeatures, sigma)
+    .Call(`_SimpleSim_SimFriedman1C`, N, nFeatures, sigma)
 }
 
 SimFriedman2C <- function(N, sigma) {
-    .Call('_SimpleSim_SimFriedman2C', PACKAGE = 'SimpleSim', N, sigma)
+    .Call(`_SimpleSim_SimFriedman2C`, N, sigma)
 }
 
 SimFriedman3C <- function(N, sigma) {
-    .Call('_SimpleSim_SimFriedman3C', PACKAGE = 'SimpleSim', N, sigma)
+    .Call(`_SimpleSim_SimFriedman3C`, N, sigma)
 }
 
 SimPolyChangePointC <- function(N, sigma, xRange, x0, m1, m2) {
-    .Call('_SimpleSim_SimPolyChangePointC', PACKAGE = 'SimpleSim', N, sigma, xRange, x0, m1, m2)
+    .Call(`_SimpleSim_SimPolyChangePointC`, N, sigma, xRange, x0, m1, m2)
 }
 
 SimSCurveC <- function(N, sigma) {
-    .Call('_SimpleSim_SimSCurveC', PACKAGE = 'SimpleSim', N, sigma)
+    .Call(`_SimpleSim_SimSCurveC`, N, sigma)
 }
 

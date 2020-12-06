@@ -54,10 +54,8 @@ SimBlobs = function(N, nFeatures=3, centers=NULL, centerBox = c(-10,10)){
     N = rep(N, nCenters)
     
   }
-  
   result = SimBlobsC(N, centers)
   return(list(x = result$X, y = result$Y, centers = centers))
 }
-
 
 
