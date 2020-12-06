@@ -19,8 +19,15 @@ test_that("test if inputs checks work", {
   expect_error(.requireVector(c("a"), "not numeric"))
   expect_error(.requireVector(8, "not vector"))
   
+  
+  # require constant
+  expect_error(.requireConstant("a", "not numeric"))
+  expect_error(.requireConstant(c(2,2,34), "vector input"))
+  
+  
+  # require whole
+  expect_error(.requireWhole(1.2, "not whole"))
 })
-
 
 
 
