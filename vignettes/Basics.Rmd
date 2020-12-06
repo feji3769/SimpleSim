@@ -1,11 +1,12 @@
 ---
-title: "SimulateData"
+title: "Basics"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{SimulateData}
+  %\VignetteIndexEntry{Basics}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -16,7 +17,7 @@ knitr::opts_chunk$set(
 
 
 # Introduction
-This document goes through the usage of a few of the SimpleSim data simulation functions and lays out how to use the package.
+This document shows how to use SimpleSim to generate Guassian blobs to highlight how the package works. 
 
 
 # Getting Started
@@ -25,16 +26,19 @@ The package is named SimpleSim and can be brought into your environment as:
 library(SimpleSim)
 ```
 
-Now we are ready to start using the functions. In what follows we will simply catalogue the most useful functions. 
+Now we are ready to start using the functions. In what follows we will generate Gaussian blobs using the SimBlobs function. 
 
 
 # Blobs
-Blobs are just Isotropic Gaussians with varying numbers of centers. To generate eight blobs on a 2d place, each with N samples we can do the following: 
+Blobs are Isotropic Gaussians with varying numbers of centers. To generate eight blobs on a 2d place, each with N samples we can do the following: 
 
 ```{r}
 blobs = SimBlobs(100, nFeatures = 2)
 plot(blobs$x[,1], blobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs")
 ```
+
+
+
 The output of any SimpleSim function will be a list of simulated data. For blobs we get back x (a matrix whose rows represent observations), y (class labels for each blob) and centers (the centers for the generated blobs).
 
 ## Changing Centers
@@ -65,6 +69,5 @@ par(mfrow = c(1,2))
 plot(closeBlobs$x[,1], closeBlobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Close")
 plot(farBlobs$x[,1], farBlobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Far")
 ```
-
 
 
