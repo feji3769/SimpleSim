@@ -9,6 +9,10 @@ SimSwissRollC <- function(N, sigma) {
     .Call('_SimpleSim_SimSwissRollC', PACKAGE = 'SimpleSim', N, sigma)
 }
 
+SimBlobsC <- function(N, centers) {
+    .Call('_SimpleSim_SimBlobsC', PACKAGE = 'SimpleSim', N, centers)
+}
+
 SimFriedman1C <- function(N, nFeatures, sigma) {
     .Call('_SimpleSim_SimFriedman1C', PACKAGE = 'SimpleSim', N, nFeatures, sigma)
 }

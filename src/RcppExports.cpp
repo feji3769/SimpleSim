@@ -32,6 +32,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// SimBlobsC
+List SimBlobsC(arma::colvec N, arma::mat centers);
+RcppExport SEXP _SimpleSim_SimBlobsC(SEXP NSEXP, SEXP centersSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::colvec >::type N(NSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type centers(centersSEXP);
+    rcpp_result_gen = Rcpp::wrap(SimBlobsC(N, centers));
+    return rcpp_result_gen;
+END_RCPP
+}
 // SimFriedman1C
 List SimFriedman1C(int N, int nFeatures, double sigma);
 RcppExport SEXP _SimpleSim_SimFriedman1C(SEXP NSEXP, SEXP nFeaturesSEXP, SEXP sigmaSEXP) {
@@ -89,6 +101,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_SimpleSim_SimMixC", (DL_FUNC) &_SimpleSim_SimMixC, 4},
     {"_SimpleSim_SimSwissRollC", (DL_FUNC) &_SimpleSim_SimSwissRollC, 2},
+    {"_SimpleSim_SimBlobsC", (DL_FUNC) &_SimpleSim_SimBlobsC, 2},
     {"_SimpleSim_SimFriedman1C", (DL_FUNC) &_SimpleSim_SimFriedman1C, 3},
     {"_SimpleSim_SimFriedman2C", (DL_FUNC) &_SimpleSim_SimFriedman2C, 2},
     {"_SimpleSim_SimFriedman3C", (DL_FUNC) &_SimpleSim_SimFriedman3C, 2},
