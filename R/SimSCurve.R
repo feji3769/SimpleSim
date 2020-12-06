@@ -9,7 +9,11 @@
 #' N = 100
 #' sigma = 0.1
 #' SimSCurve(N, sigma)
-SimSCurve = function(N, sigma = 0.1){
+SimSCurve = function(N, sigma = 0.1, seed = NULL){
+  if(!is.null(seed)){
+    .checkSeed(seed)
+    set.seed(seed)
+  }
   .requireConstant(N, "N")
   .requireWhole(N, "N")
   .checkPositive(N, "N")
