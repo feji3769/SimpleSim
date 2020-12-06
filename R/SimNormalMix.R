@@ -16,6 +16,23 @@
 #' p = c(1/4, 1/4, 1/2)
 #' SimNormalMix(N, mu, sigma, p)
 SimNormalMix = function(N, mu, sigma, p){
+  .checkPositive(N)
+  .requireConstant(N)
+  .checkPositive(sigma)
+  .checkPositive(p)
+  
+  
+  if(sum(p) != 1){
+    stop("p must sum to one.")
+  }
+  
+  if(length(mu) != length(sigma)){
+    stop("sigma and mu must be the same length.")
+  }
+  if(N < length(mu)){
+   stop("N must be greater than or equal to length of mu.") 
+  }
+  
   result = SimMixC(N, mu, sigma, p)
   return(list(x = result[ , 2], y = result[ , 1]))
 }
