@@ -40,6 +40,7 @@ N = 100
 linearResult = SimPolyChangePoint(N, sigma = 0.1, x0 = 0.5, m1 = c(.1, 0), m2 = c(5, 0))
 plot(linearResult$data[,1], linearResult$data[,2], ylab = "y", xlab = "x", main = "Linear Change Point Model")
 ```
+
 Now those are two lines! Be better if they have some curve to them though, so let's bump up the degree of the first model. 
 
 
