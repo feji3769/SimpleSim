@@ -7,6 +7,7 @@
 #' @param x0 change point value, default = 0.5.
 #' @param m1 coefficients for first polynomial model, default = c(1,2).
 #' @param m2 coefficients for second polynomial model, default = c(0,3).
+#' @param seed seed for RNG (default = NULL).
 #' @return list(data = matrix(x,y,z), t = t)
 #' @export
 #' @examples

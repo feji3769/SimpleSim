@@ -3,6 +3,7 @@
 #' @description Simulate data from a Swiss Roll. 
 #' @param N number of data points to simulate.
 #' @param sigma noise level.
+#' @param seed seed for RNG (default = NULL).
 #' @return list(data = matrix(x,y,z), t = t)
 #' @export
 #' @examples

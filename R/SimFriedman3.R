@@ -2,7 +2,8 @@
 #' @title Friedman 3
 #' @description Simulate from the 'Friedman #3' regression problem.
 #' @param N Number of data points to simulate. Positive integer.
-#' @param sigma Noise level for Gaussian noise. Must be postive.   
+#' @param sigma Noise level for Gaussian noise. Must be postive.  
+#' @param seed seed for RNG (default = NULL). 
 #' @return list(x = x, y = y)
 #' @export
 #' @examples

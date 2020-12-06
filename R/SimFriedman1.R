@@ -4,6 +4,7 @@
 #' @param N Number of data points to simulate. Positive integer.
 #' @param nFeatures Number of features, must be at least 5. Positive ingter.
 #' @param sigma Noise level for Gaussian noise. Must be postive.   
+#' @param seed seed for RNG (default = NULL).
 #' @return list(x = x, y = y)
 #' @export
 #' @examples

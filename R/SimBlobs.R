@@ -6,6 +6,7 @@
 #' @param nFeatures The number of features for each blob (default = 3).
 #' @param centers The centers of the blobs (default = NULL). 
 #' @param centerBox The bounding box for centers when generated randomly (default = c(-10, 10)). 
+#' @param seed seed for RNG (default = NULL).
 #' @return list(x = x, y = y, centers = centers)
 #' @importFrom stats runif
 #' @export

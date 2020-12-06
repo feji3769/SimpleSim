@@ -3,6 +3,7 @@
 #' @description Simulate data according to the S-curve. 
 #' @param N Number of data points. 
 #' @param sigma The sd of the gaussian noise (default = 0.1) must be positive. 
+#' @param seed seed for RNG (default = NULL).
 #' @return list(x = x, t = t)
 #' @export
 #' @examples

@@ -7,6 +7,7 @@
 #' @param mu vector of means.
 #' @param sigma vector of standard deviations.
 #' @param p vector of weights for each distribution.
+#' @param seed seed for RNG (default = NULL).
 #' @return list(x = x, label = label)
 #' @export
 #' @examples
