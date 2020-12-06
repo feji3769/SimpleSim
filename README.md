@@ -36,3 +36,9 @@ SimpleSim can generate the following data:
            
            
 [4] http://people.cs.uchicago.edu/~dinoj/manifold/swissroll.html
+
+
+
+  <!-- badges: start -->
+  [![Travis build status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=master)](https://travis-ci.com/feji3769/SimpleSim)
+  <!-- badges: end -->
