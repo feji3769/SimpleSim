@@ -9,7 +9,11 @@
 #' N = 100
 #' sigma = 0.1
 #' SimFriedman3(N, sigma)
-SimFriedman3 = function(N, sigma){
+SimFriedman3 = function(N, sigma, seed = NULL){
+  if(!is.null(seed)){
+    .checkSeed(seed)
+    set.seed(seed)
+  }
   if(!(is.numeric(N) & is.numeric(sigma))){
     stop("N and sigma must be numeric.")
   }
