@@ -26,6 +26,11 @@ Simulate from isometric Gaussian blobs.
 }
 \examples{
 N = c(2,2,2)
-centers = centers = matrix(c(1,10,35, 67,6,7), ncol = 2)
+centers = matrix(c(1,10,35, 67,6,7), ncol = 2)
 SimBlobs(N, centers = centers)
+
+N = 10
+centers = 3
+centerBox = c(0,1)
+SimBlobs(N, centers = centers, centerBox = centerBox, seed = 1)
 }

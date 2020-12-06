@@ -29,8 +29,10 @@ test_that("Sim blobs works", {
   expect_error(SimBlobs(10, -1)) # bad nFeatures 
   expect_error(SimBlobs(10, 3, -1)) # bad centers
   
-  expect_error(SimBlobs(10, 3, -1)) # bad 
+  
+  N = c(2,2)
+  centers = matrix(c(1,10,35, 67,6,7), ncol = 2)
+  expect_error(SimBlobs(N, centers = centers)) # mismatch in number of centers and length of N. 
   expect_error(SimBlobs(10, centerBox = c(1, 0))) # bad center box. 
   
 })
-
