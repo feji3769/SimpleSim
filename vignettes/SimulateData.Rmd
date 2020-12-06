@@ -14,6 +14,57 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+# Introduction
+This document goes through the usage of a few of the SimpleSim data simulation functions and lays out how to use the package.
+
+
+# Getting Started
+The package is named SimpleSim and can be brought into your environment as: 
 ```{r setup}
 library(SimpleSim)
 ```
+
+Now we are ready to start using the functions. In what follows we will simply catalogue the most useful functions. 
+
+
+# Blobs
+Blobs are just Isotropic Gaussians with varying numbers of centers. To generate eight blobs on a 2d place, each with N samples we can do the following: 
+
+```{r}
+blobs = SimBlobs(100, nFeatures = 2)
+plot(blobs$x[,1], blobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs")
+```
+The output of any SimpleSim function will be a list of simulated data. For blobs we get back x (a matrix whose rows represent observations), y (class labels for each blob) and centers (the centers for the generated blobs).
+
+## Changing Centers
+Below we play with some more features of the Blobs function.
+```{r}
+# specifying the centers of each blob.  
+centers = matrix(c(2,3,10,11), byrow = T, ncol = 2)
+blobs = SimBlobs(40, centers)
+plot(blobs$x[,1], blobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Centers Given")
+```
+
+## Changing Centers
+We can create a matrix of centers (each row is a center).
+```{r}
+# specifying the centers of each blob.  
+centers = matrix(c(2,3,10,11), byrow = T, ncol = 2)
+blobs = SimBlobs(40, centers)
+plot(blobs$x[,1], blobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Centers Given")
+```
+
+## Changing Bounding Box
+You can also choose to have the centers of the blobs we uniformly generated within the interval given by centerBox. 
+
+```{r}
+closeBlobs = SimBlobs(40, centerBox = c(-1,1))
+farBlobs = SimBlobs(40, centerBox = c(-100, 100))
+par(mfrow = c(1,2))
+plot(closeBlobs$x[,1], closeBlobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Close")
+plot(farBlobs$x[,1], farBlobs$x[,2], xlab = "x1", ylab = "x2", main = "2D Blobs Far")
+```
+
+
+
