@@ -1,7 +1,8 @@
 # SimpleSim
 
   <!-- badges: start -->
-  [![Travis build status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=master)](https://travis-ci.com/feji3769/SimpleSim)
+[![Build Status](https://travis-ci.com/feji3769/SimpleSim.svg?branch=main)](https://travis-ci.com/feji3769/SimpleSim)
+
   
 [![codecov](https://codecov.io/gh/feji3769/SimpleSim/branch/main/graph/badge.svg?token=M7OCZNJ28T)](https://codecov.io/gh/feji3769/SimpleSim)
   <!-- badges: end -->
