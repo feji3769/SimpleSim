@@ -6,6 +6,12 @@
   
 [![codecov](https://codecov.io/gh/feji3769/SimpleSim/branch/main/graph/badge.svg?token=M7OCZNJ28T)](https://codecov.io/gh/feji3769/SimpleSim)
   <!-- badges: end -->
+  
+## Installation 
+You can download the latest version of SimpleSim from github using : 
+```
+devtools::install_github("feji3769/SimpleSim")
+```
 ## Introduction
 This library contains functions for simulating data. The goal is to have fast and intuitive functions. 
 
