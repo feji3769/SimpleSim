@@ -1,7 +1,7 @@
 Package: SimpleSim
 Type: Package
 Title: Simulate data for model building
-Version: 0.1.0
+Version: 1.0.0
 Author: Felix Jimenez
 Maintainer: Felix Jimenez <felix.jimenez@tamu.edu>
 Description: Simulates data for model building. 

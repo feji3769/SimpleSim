@@ -5,7 +5,6 @@ using namespace Rcpp;
 //
 // [[Rcpp::export]]
 arma::mat SimMixC(int N, arma::colvec mu, arma::colvec sigma, std::vector<double> p) {
-  int numP = p.size();
   arma::mat result(N, 2, arma::fill::zeros);
   std::default_random_engine generator;
   std::discrete_distribution<int> mixDist (p.begin(), p.end());
